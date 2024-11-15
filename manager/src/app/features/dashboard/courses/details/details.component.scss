@@ -1,0 +1,81 @@
+@import '../../../../shared/colors.scss';
+.container{
+    padding: 20px;
+    background-color: $gris-oscuro2;
+    .container-info{
+        margin: 0px 15px 30px 0;
+        padding: 40px;
+        background-color: $background-container;
+        box-shadow: 0 0 10px $color-principal;
+        border-radius: 20px;
+        border-bottom: none;
+        width: 90%;
+        margin: auto;
+        .botones{
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .btn-salir,.btn-editar{
+                display: flex;
+                flex-direction: row;
+                font-size: 15px;
+                button{
+                    color: $blanco;
+                }
+                p{
+                    color: $gris-claro;
+        
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+                .btn{
+                    display: flex;
+                    flex-direction: row;
+                }
+            }
+        }
+
+        .encabezado{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h2{
+                color: $color-principal;
+                font-size: 40px;
+                letter-spacing: 3px;
+            }
+        }
+        
+
+        .informacion-curso{
+            display: flex;
+            flex-direction: row;
+           justify-content: space-between;
+            gap: 140px;
+
+            p{
+                color: $blanco;
+                font-size: 16px;
+                word-wrap: break-word;
+            }
+            .contenido{
+                .form-field{
+                    width: 350px;
+                    
+                }
+            }
+        }
+        .elseB2{
+            padding: 20px;
+            p{
+                text-align: center;
+                font-size: 18px;
+                color: $gris-claro;
+            }
+        }
+    }
+}

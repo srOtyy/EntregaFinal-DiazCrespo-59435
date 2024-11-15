@@ -1,0 +1,61 @@
+<div class="modal-div">
+    <h3>Editando: {{course?.name}}</h3>
+    
+  <form class="formulario" [formGroup]="formulario">
+    <div class="inputs">
+      <div class="div1">
+        <!-- nombre -->
+        <mat-form-field class="form-field">
+          <mat-label>Nombre del curso</mat-label>
+          <input  matInput  formControlName="name">
+          <mat-error *ngIf="this.formulario.get('name')?.hasError('required')">El nombre es <strong>obligatorio</strong></mat-error>
+        </mat-form-field>
+        <!-- categoria -->
+        <mat-form-field class="form-field">
+          <mat-label>Categoria</mat-label>
+          <mat-select formControlName ="category">
+              <mat-option *ngFor="let category of categorys" [value]="category">
+                  {{category}}
+              </mat-option>
+          </mat-select>
+          <mat-error *ngIf="this.formulario.get('category')?.hasError('required')">La categoria es <strong>obligatoria</strong></mat-error>
+
+        </mat-form-field>
+        <!-- profesor -->
+        <mat-form-field class="form-field">
+          <mat-label>Nombre completo del profesor</mat-label>
+          <input  matInput  formControlName="professor">
+          <mat-error *ngIf="this.formulario.get('professor')?.hasError('required')">El nombre del profesor es <strong>obligatorio</strong></mat-error>
+          <mat-error *ngIf="this.formulario.get('professor')?.hasError('minlength')">El nombre <strong>debe tener minimo</strong> 6 caracteres</mat-error>
+        </mat-form-field>
+    </div>
+    <div class="div2">
+      <!-- descripcion -->
+      <mat-form-field class="form-field ">
+        <mat-label>Descripcion</mat-label>
+        <textarea matInput formControlName="description" class="textarea"></textarea>
+        <mat-error *ngIf="this.formulario.get('description')?.hasError('required')">La descripcion es <strong>obligatoria</strong></mat-error>
+        <mat-error *ngIf="this.formulario.get('description')?.hasError('minlength')">La descripcion <strong>debe tener minimo</strong> 40 caracteres (máximo 220)</mat-error>
+        <mat-error *ngIf="this.formulario.get('description')?.hasError('maxlength')">La descripcion <strong>no debe superar</strong>los 220 caracteres</mat-error>
+      </mat-form-field> 
+      <!-- comisiones -->
+      <mat-form-field class="form-field" *ngIf="creating">
+        <mat-label>Comisiones disponibles</mat-label>
+        <mat-select formControlName ="comissions" multiple>
+            <mat-option *ngFor="let com of comissions" [value]="com">
+                {{com.schedules}} ( {{com.name}})
+            </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    
+    </div>
+
+    <button mat-flat-button type="button"  [disabled]="!this.formulario.valid" (click)="send()" [ngClass]="{'button': this.formulario.valid, 'disabled': !this.formulario.valid}">
+     Guardar
+    </button>
+
+    <button mat-button type="button"  (click)="close()" class="button">Volver</button>
+  </form>
+  
+</div>

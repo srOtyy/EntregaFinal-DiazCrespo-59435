@@ -1,0 +1,22 @@
+
+<div class="dashboard">
+  
+  <div class="sidenav">
+    <div class="lista1" >
+      <a class="a" mat-button routerLink="/dashboard/home"> <mat-icon>home</mat-icon> Inicio</a>
+      <a  class="a" mat-button routerLink="/dashboard/courses/"> <mat-icon>search</mat-icon> Explorar cursos</a>
+    </div>
+    <div  class="lista2">
+      <a  class="a" mat-button routerLink="/dashboard/students/"> <mat-icon>school</mat-icon> Estudiantes</a>
+      <a  class="a" mat-button (click)="logout()"> <mat-icon>logout</mat-icon> Cerrar sesión</a>
+    </div>
+  </div>
+
+  <!-- la barra que separa el sidenav del main-div -->
+  <div class="gradiente"></div>
+
+
+  <div class="main-div">
+    <router-outlet/>
+  </div>
+</div>

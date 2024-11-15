@@ -1,0 +1,31 @@
+@import "../../../shared/colors.scss";
+
+.background{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .encabezado{
+        h1{
+            padding: 10px 70px;
+            text-align: start;
+            color: $blanco;
+            font-size: 30px;
+        }
+    }   
+    .datos{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        box-shadow: 0 0 5px $gris-claro;
+        border-radius: 20px;
+        background-color: $background-container;
+        margin-bottom: 40px;
+    }
+    .elseB{
+        color: $blanco;
+    }
+}
+.elseB1{
+    color: $blanco;
+    text-align: center;
+}

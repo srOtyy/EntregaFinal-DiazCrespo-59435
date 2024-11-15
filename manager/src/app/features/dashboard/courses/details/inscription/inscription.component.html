@@ -1,0 +1,45 @@
+<mat-stepper linear #stepper    class="stepper" *ngIf="course">
+    <mat-step  [editable]="!registrationCompleted" [stepControl]="formulario">
+      <ng-template matStepLabel >Datos de la cursada</ng-template>
+        <div class="container">
+          <div class="info">
+            <p> <strong>Profesor/a:</strong> {{course.professor}}</p>
+            <p> <strong>Duracion:</strong> {{course.classes.length}} clases </p>
+          </div>
+          <form [formGroup]="formulario">
+            <mat-form-field   class="select" >
+              <mat-label >Comisiones</mat-label>
+              <mat-select formControlName="comision" [(value)]="comision" >
+                <mat-option *ngFor="let comision of course.comissions" [value]="comision.name" >
+                  {{comision.schedules}}
+                </mat-option>
+              </mat-select>
+              <mat-error>Por favor, selecciona una comisión</mat-error>
+            </mat-form-field>
+          </form>
+          
+        </div>
+        <div>
+          <button mat-button matStepperNext >Siguiente</button>
+        </div>
+    </mat-step>
+    
+    <mat-step class="mat-step" [editable]="!registrationCompleted">
+      <ng-template matStepLabel>Inscripción</ng-template>
+        <p>Tu comision es : {{comision}}</p>
+        <p>Tu profesor es: {{course.professor}}</p>
+        <p>¿Confirmas la inscripcion al curso de {{course.name}}?</p>
+      <div >
+        <button mat-button matStepperPrevious >Atrás</button>
+        <button mat-button matStepperNext (click)="confirm()">Confirmar</button>
+      </div>
+    </mat-step>
+
+    <mat-step class="mat-step">
+      <ng-template matStepLabel>Finalizado</ng-template>
+      <h2>¡Gracias por confirmar!</h2>
+      <p>Te enviamos un mail con todos los datos que necesitas saber <br> ¡Esperamos que disfrutes del curso!</p>
+      <button mat-button routerLink="/dashboard/courses">Volver</button>
+    </mat-step>
+
+</mat-stepper>

@@ -1,0 +1,26 @@
+@import "../../../../../shared/colors.scss";
+.stepper{
+    margin-top: 20px;
+    background-color: $background-container;
+    color: $gris-claro;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: inherit;
+        .info{
+            p{
+                padding-top: 20px;
+            }
+        }
+        .select{
+            width: 360px;
+
+            height: 80px;
+        }
+    }
+   
+}

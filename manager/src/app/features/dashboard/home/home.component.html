@@ -1,0 +1,18 @@
+
+<div class="background" *ngIf="student; else elseB1">
+    <div class="encabezado">
+        <ng-container >
+            <h1>¡{{student.name | firstName}}, Bienvenido! <mat-icon>mood</mat-icon></h1>
+        </ng-container>
+        
+    </div>
+    <div class="datos" >
+        <app-course-container [list]="student.courses"/>
+        <app-profile-container [student]="student"/>
+    </div>
+</div>
+<ng-template #elseB1>
+    <div class="elseB1">
+        <h2>No hay alumno para mostrar</h2>
+    </div>
+</ng-template>

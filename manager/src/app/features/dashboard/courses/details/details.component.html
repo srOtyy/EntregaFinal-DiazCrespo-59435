@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="container-info" *ngIf="course; else elseB"  >
+      <div class="botones">
+        <div class="btn-salir">
+          <button mat-icon-button routerLink="/dashboard/courses"> <mat-icon>reply</mat-icon> </button>
+          <p routerLink="/dashboard/courses">volver</p>
+        </div>
+        <div  *ngIf="(currentStudent$ | async)?.admin"  class="btn-editar" >
+            <div class="btn">
+              <p routerLink="/dashboard/courses/edit/{{course.id}}">editar curso</p>
+              <button mat-icon-button routerLink="/dashboard/courses/edit/{{course.id}}"> <mat-icon>settings</mat-icon> </button>
+            </div>
+            <div class="btn">
+              <p routerLink="/dashboard/courses/classes/{{course.id}}">editar clases</p>
+              <button mat-icon-button routerLink="/dashboard/courses/classes/{{course.id}}"> <mat-icon>school</mat-icon> </button>
+            </div>
+        </div>
+      </div>
+        <div class="encabezado">
+          <h2 >{{course.name}}</h2>
+        </div>
+        <div class="informacion-curso">
+          <p> {{course.description}}</p> 
+          <div class="contenido">
+            <mat-form-field     class="form-field">
+              <mat-label >Contenido del curso</mat-label>
+              <mat-select class="mat-select" panelClass="select">
+                <mat-option *ngFor="let class of course.classes ">
+                    {{class}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <mat-divider></mat-divider>
+        <ng-container *ngIf="registration; else elseB2">
+          <app-inscription [course]="course"/>
+        </ng-container>
+        <ng-template #elseB2>
+            <div class="elseB2">
+              <p>Ya te encuentras inscripto en este curso <mat-icon>mood</mat-icon></p>
+
+            </div>
+        </ng-template>
+    </div>
+    <ng-template #elseB class="container-info">
+        <h2>Curso no encontrado</h2>
+    </ng-template>
+    
+</div>

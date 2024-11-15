@@ -1,0 +1,44 @@
+@import "../../../../shared/colors.scss";
+.modal-div{
+    background-color: $gris-oscuro1;
+    height: auto;
+    width: 500px;
+    padding: 20px;
+    h3{
+        text-align: center;
+        font-weight: 500;
+        font-size: 20px;
+        margin: 15px;
+        color:$blanco
+    }
+    
+    .lista{
+        padding: 20px;
+        max-height: 379px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+       .item{
+            border-bottom: 1px solid $gris-claro;
+            padding: 27px;
+            color: $blanco;
+            margin: auto;
+            p{
+                color: $blanco;
+            }
+       }
+            
+    }
+    .botones{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        button{
+            width: 205px;
+            background-color: $blanco;
+            color: $color-principal;
+        }
+    }
+    
+    
+}

@@ -1,0 +1,23 @@
+<div class="container-lista-cursos">
+    <div class="encabezado">
+        <h3>Lista Cursos</h3>
+        <a mat-raised-button *ngIf="(currentStudent$ | async)?.admin"  routerLink="/dashboard/courses/edit"> <mat-icon>add</mat-icon> Agregar nuevo curso</a>
+    </div>
+    <div class="lista-cursos">
+        <mat-list class="lista">
+            <mat-list-item *ngFor="let course of coursesList" class="item-lista">
+                <div class="flex-item">
+                    <div class="datos">
+                        <span matListItemTitle class="span-titulo">{{course.name}}</span>
+                        <span matListItemLine class="span-line">{{course.category}}</span>
+                    </div>
+                    <div class="botones">
+                        <button mat-icon-button class="btn-borrar" *ngIf="(currentStudent$ | async)?.admin" (click)="deleteCourse(course.id)"><mat-icon >close</mat-icon></button>
+                        <a mat-icon-button class="btn-info" routerLink="/dashboard/courses/details/{{course.id}}"> <mat-icon> visibility</mat-icon> </a>
+                    </div>
+                </div>
+            </mat-list-item>
+        </mat-list>
+        
+    </div>
+</div>

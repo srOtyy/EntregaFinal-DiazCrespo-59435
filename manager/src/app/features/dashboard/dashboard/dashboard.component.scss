@@ -1,0 +1,64 @@
+@import "../../../shared/colors.scss";
+
+.dashboard {
+  display: flex;
+  height: 100%; 
+  .sidenav {
+    position: fixed; 
+    top: 84px;
+    left: 0;
+    width: 240px; 
+    height: 100%;
+    background-color: $gris-oscuro2;
+    z-index: 1; 
+    .lista1, .lista2{
+      margin: auto;
+      margin-top: 15px;
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+      border-bottom: 2px solid $color-principal;
+      width: 60%;
+      padding: 20px ;
+      .a{
+        color: $blanco;
+        font-size: 14px;
+        padding: 17px;
+        width: 180px;
+        text-align: center;
+      }
+      .a:hover{
+        background-color: $hover-azul;
+      }
+      
+    }
+  }    
+  .gradiente {
+    width: 6px; 
+    height: auto;
+    background: linear-gradient(to top,$azul-oscuro,$color-principal,$azul-oscuro,$color-principal); 
+    background-size: 100% 300%;
+    background-position: 0 0; 
+    animation: moveGradient 10s ease-in-out infinite; 
+    margin-left: 250px;
+  }
+
+  .main-div {
+    flex: 1; 
+    padding: 20px;
+    background-color: $gris-oscuro2;
+    min-height: 90vh;
+  }
+
+}
+@keyframes moveGradient {
+  0% {
+    background-position: 0 100%; 
+  }
+  100%{
+    background-position:0 0 ;
+  }
+ 
+}

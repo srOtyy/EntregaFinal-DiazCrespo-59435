@@ -1,0 +1,50 @@
+<div class="container-perfil-estudiante" *ngIf="currentStudent">
+    <div class="botones">
+        <div class="btn-salir">
+            <button mat-icon-button routerLink="/dashboard/students"> <mat-icon>reply</mat-icon> </button>
+            <p routerLink="/dashboard/students">volver</p>
+          </div>
+        <div class="btn-editar"  *ngIf="(currentStudent$ | async)?.admin && currentStudent.admin != true">
+            <button mat-icon-button   (click)="openModal(currentStudent)"> <mat-icon title="editar perfil">settings</mat-icon></button>
+            <p (click)="openModal(currentStudent)">Editar</p>
+        </div>
+    </div>
+    <div class="encabezado">
+        <h3>Datos del estudiante</h3>
+    </div>
+    <div class="datos-estudiante">
+       <h4>{{currentStudent.name}}</h4>
+       <mat-divider></mat-divider>
+        <div class="datos">
+            <p> <strong>e-mail:</strong> {{currentStudent.email}}</p>
+            <p> <strong>Rol:</strong> alumno</p>
+           <mat-divider></mat-divider>
+            <div class="flex-cursos">
+                <p>Esta inscripto a los siguientes cursos:</p>
+                <button mat-raised-button (click)="openCoursesModal()"> <mat-icon>add</mat-icon>Agregar cursos </button>
+            </div>
+        </div>
+    </div>
+    <div class="cursos-estudiante">
+       <mat-divider></mat-divider>
+
+        <mat-list   class="lista" *ngIf="studentCoursesList.length != 0; else elseB">
+            <mat-list-item *ngFor="let course of studentCoursesList" class="item">
+                <div class="flex">
+                    <div class="nombre">
+                        <p>{{course.name}}</p>
+                    </div>
+                    <div class="boton">
+                        <button mat-icon-button class="btn-borrar" (click)="leaveCourse(course.id)">
+                            <mat-icon >close</mat-icon>
+                        </button>
+                    </div>
+                </div>
+                
+            </mat-list-item>
+        </mat-list>
+        <ng-template #elseB>
+            <p [style.color]="'#ffffff'">Todavia no estas en ningun curso...</p>
+        </ng-template>
+    </div>
+</div>

@@ -1,0 +1,307 @@
+{
+  "students": [
+    {
+      "id": "93c8",
+      "name": "Octavio Nahuel Diaz Crespo",
+      "email": "oty3@outlook.com",
+      "courses": [],
+      "token": "123456"
+    },
+    {
+      "id": "ba23",
+      "name": "admin",
+      "email": "admin@admin",
+      "courses": [
+        "1f2s",
+        "5m6n",
+        "3i4j",
+        "4k5l"
+      ],
+      "token": "asdfg",
+      "admin": true
+    },
+    {
+      "id": "5ac3",
+      "name": "Usuario",
+      "email": "usuario@usuario",
+      "courses": [
+        "3i4j",
+        "4k5l"
+      ],
+      "token": "jahsqknf7"
+    },
+    {
+      "id": "98b2",
+      "name": "nuevo usuario",
+      "email": "mail@mail",
+      "courses": [],
+      "token": "wtgrhbdgx"
+    }
+  ],
+  "courses": [
+    {
+      "name": "Python",
+      "id": "1f2s",
+      "category": "Programación",
+      "professor": "Alberto Carlos Umberto Flores",
+      "classes": [
+        "Variables y Tipos de Datos",
+        "Operadores",
+        "Estructuras Condicionales",
+        "Bucles",
+        "Listas y Tuplas",
+        "Diccionarios y Conjuntos",
+        "Funciones y Ámbito de Variables",
+        "Manejo de Errores y Excepciones",
+        "Entrada y Salida de Datos",
+        "Módulos y Paquetes",
+        "Introducción a la Programación Orientada a Objetos (POO)",
+        "Clases y Objetos",
+        "Métodos y Atributos de Instancia y de Clase",
+        "Herencia y Polimorfismo"
+      ],
+      "description": "Python es un lenguaje de programación interpretado, de alto nivel, fácil de aprender y con sintaxis clara. Es versátil y ampliamente usado en desarrollo web, ciencia de datos, automatización, inteligencia artificial, y más. Su gran comunidad y extensas bibliotecas lo hacen muy popular.",
+      "comissions": [
+        {
+          "name": "A1",
+          "schedules": "Lunes y Miércoles de 18hs-20hs"
+        },
+        {
+          "name": "B1",
+          "schedules": "Martes y Jueves de 18hs-20hs"
+        },
+        {
+          "name": "B2",
+          "schedules": "Martes y Jueves de 17hs-19hs"
+        }
+      ]
+    },
+    {
+      "name": "Java",
+      "id": "2g3h",
+      "category": "Programación",
+      "professor": "María Gómez",
+      "classes": [
+        "Introducción a Java",
+        "Variables y Tipos de Datos",
+        "Estructuras de Control",
+        "Clases y Objetos",
+        "Herencia y Polimorfismo",
+        "Excepciones",
+        "Manejo de Archivos",
+        "Colecciones en Java",
+        "Programación Genérica",
+        "Hilos y Concurrencia"
+      ],
+      "description": "Java es un lenguaje de programación versátil y multiplataforma que es utilizado en una amplia gama de aplicaciones, desde aplicaciones móviles hasta sistemas empresariales robustos.",
+      "comissions": [
+        {
+          "name": "C1",
+          "schedules": "Lunes y Miércoles de 19hs-21hs"
+        },
+        {
+          "name": "C2",
+          "schedules": "Martes y Jueves de 16hs-18hs"
+        }
+      ]
+    },
+    {
+      "name": "C++",
+      "id": "3i4j",
+      "category": "Programación",
+      "professor": "José Luis Martínez",
+      "classes": [
+        "Introducción a C++",
+        "Tipos de Datos y Operadores",
+        "Estructuras Condicionales",
+        "Bucles",
+        "Funciones",
+        "Clases y Objetos",
+        "Herencia",
+        "Polimorfismo",
+        "Manejo de Memoria",
+        "Programación Orientada a Objetos"
+      ],
+      "description": "C++ es un lenguaje de programación de alto rendimiento ampliamente utilizado en desarrollo de sistemas, videojuegos y aplicaciones que requieren un control detallado de los recursos del sistema.",
+      "comissions": [
+        {
+          "name": "D1",
+          "schedules": "Miércoles y Viernes de 14hs-16hs"
+        },
+        {
+          "name": "D2",
+          "schedules": "Lunes y Miércoles de 17hs-19hs"
+        }
+      ]
+    },
+    {
+      "name": "C#",
+      "id": "4k5l",
+      "category": "Programación",
+      "professor": "Ana Rodríguez",
+      "classes": [
+        "Introducción a C#",
+        "Sintaxis Básica",
+        "Clases y Objetos",
+        "Herencia y Polimorfismo",
+        "Manejo de Excepciones",
+        "Delegados y Eventos",
+        "LINQ",
+        "Programación Asíncrona"
+      ],
+      "description": "C# es un lenguaje de programación moderno y orientado a objetos desarrollado por Microsoft, ampliamente utilizado en desarrollo de aplicaciones de escritorio, web y móviles.",
+      "comissions": [
+        {
+          "name": "E1",
+          "schedules": "Martes  y Jueves de 10hs-12hs"
+        },
+        {
+          "name": "E2",
+          "schedules": "Viernes  y Sábado de 14hs-16hs"
+        }
+      ]
+    },
+    {
+      "name": "UX/UI Design",
+      "id": "5m6n",
+      "category": "Diseño",
+      "professor": "Laura Pérez",
+      "classes": [
+        "Fundamentos del Diseño UX",
+        "Investigación de Usuarios",
+        "Wireframes y Prototipos",
+        "Diseño de Interfaces",
+        "Pruebas de Usabilidad",
+        "Design Thinking",
+        "Interacción y Animaciones"
+      ],
+      "description": "El diseño UX/UI se enfoca en la creación de experiencias de usuario atractivas y funcionales mediante la investigación, diseño y pruebas de interfaces visuales y de interacción.",
+      "comissions": [
+        {
+          "name": "F1",
+          "schedules": "Miércoles y Viernes de 9hs-11hs"
+        },
+        {
+          "name": "F2",
+          "schedules": "Lunes y Miércoles de 13hs-15hs"
+        }
+      ]
+    },
+    {
+      "name": "SQL",
+      "id": "6o7p",
+      "category": "Bases de Datos",
+      "professor": "Carlos Díaz",
+      "classes": [
+        "Introducción a SQL",
+        "Consultas Básicas",
+        "Joins y Subconsultas",
+        "Funciones de Agregación",
+        "Manipulación de Datos",
+        "Administración de Bases de Datos",
+        "Optimización de Consultas",
+        "Mongo es mejor"
+      ],
+      "description": "SQL es el lenguaje estándar para gestionar y manipular bases de datos relacionales. Es esencial para el manejo de datos estructurados en sistemas de información.",
+      "comissions": [
+        {
+          "name": "G1",
+          "schedules": "Lunes y Miércoles de 18hs-20hs"
+        },
+        {
+          "name": "G2",
+          "schedules": "Martes y Jueves de 15hs-17hs"
+        }
+      ]
+    },
+    {
+      "id": "9272",
+      "name": "MongoDB",
+      "category": "Base de datos",
+      "professor": "Luisina Germina",
+      "classes": [
+        "Introducción a MongoDB",
+        "Estructura de documentos y colecciones",
+        "Consultas avanzadas y optimización",
+        "Diseño de esquemas en MongoDB",
+        "Agregaciones y procesamiento de datos",
+        "Mongoose y node.js"
+      ],
+      "description": "MongoDB está diseñado para introducir a los estudiantes en el uso de bases de datos NoSQL, diseño de esquemas, índices y agregaciones para desarrollar aplicaciones escalables.",
+      "comissions": [
+        {
+          "name": "H1",
+          "schedules": "Lunes y Martes de 17hs a 19hs"
+        },
+        {
+          "name": "M2",
+          "schedules": "Miércoles y Viernes de 10hs a 12hs"
+        },
+        {
+          "name": "N3",
+          "schedules": "Jueves de 18hs a 21hs"
+        }
+      ]
+    },
+    {
+      "id": "9283",
+      "name": "Figma (Diseño de interfaces)",
+      "category": "Diseño",
+      "professor": "Fernando Rivera",
+      "classes": [
+        "Introducción a Figma y su entorno de trabajo",
+        "Fundamentos de diseño de interfaces",
+        "Creación de componentes y reutilización",
+        "Prototipado interactivo",
+        "Colaboración en proyectos de diseño"
+      ],
+      "description": "Figma es una herramienta de diseño y prototipado de interfaces colaborativa, ideal para crear y compartir diseños interactivos y responsivos para aplicaciones y sitios web.",
+      "comissions": [
+        {
+          "name": "M1",
+          "schedules": "Lunes y Miércoles de 14hs a 16hs"
+        },
+        {
+          "name": "T2",
+          "schedules": "Martes y Jueves de 10hs a 12hs"
+        },
+        {
+          "name": "N4",
+          "schedules": "Viernes de 18hs a 21hs"
+        }
+      ]
+    }
+  ],
+  "comission": [
+    {
+      "name": "H1",
+      "schedules": "Lunes y Martes de 17hs-19hs",
+      "id": "2d08"
+    },
+    {
+      "name": "H2",
+      "schedules": "Martes y Jueves de 20hs-22hs",
+      "id": "8acf"
+    },
+    {
+      "name": "I1",
+      "schedules": "Lunes y Miercoles de 18hs-20hs",
+      "id": "eb7a"
+    },
+    {
+      "name": "I2",
+      "schedules": "Miercoles y Viernes de 19hs-21hs",
+      "id": "abe8"
+    },
+    {
+      "name": "I3",
+      "schedules": "Jueves y Viernes de 20hs-22hs",
+      "id": "6e05"
+    },
+    {
+      "name": "P1",
+      "schedules": "Sabados de 9hs-12hs",
+      "id": "6421"
+    }
+  ]
+}

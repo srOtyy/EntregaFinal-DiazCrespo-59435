@@ -1,0 +1,23 @@
+<div class="container-lista-estudiantes">
+    <div class="encabezado">
+        <h3>Lista de estudiantes</h3>
+        <a mat-raised-button  *ngIf="(currentStudent$ | async)?.admin" (click)="openModal()"> <mat-icon>add</mat-icon> Agregar nuevo estudiante</a>
+    </div>
+    <div class="lista-estudiantes">
+        <mat-list class="lista">
+            <mat-list-item *ngFor="let student of studentList" class="item-lista">
+                <div class="flex-item">
+                    <div class="datos">
+                        <span matListItemTitle class="span-titulo">{{student.name}}</span>
+                        <span matListItemLine class="span-line">{{student.email}}</span>
+                    </div>
+                    <div class="botones">
+                        <button mat-icon-button class="btn-borrar"  *ngIf="(currentStudent$ | async)?.admin && student.admin != true" (click)="deleteStudent(student.id)"><mat-icon >close</mat-icon></button>
+                        <button mat-icon-button class="btn-editar"  routerLink="/dashboard/students/edit/{{student.id}}" ><mat-icon  >visibility</mat-icon></button>
+                    </div>
+                </div>
+            </mat-list-item>
+        </mat-list>
+        
+    </div>
+</div>

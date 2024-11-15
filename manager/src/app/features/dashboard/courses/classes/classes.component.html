@@ -1,0 +1,32 @@
+<div class="container-lista-clases" *ngIf="course; else elseB">
+    <div class="btn">
+        <button mat-icon-button routerLink="/dashboard/courses/details/{{course.id}}"> <mat-icon>reply</mat-icon> </button>
+        <p routerLink="/dashboard/courses/details/{{course.id}}">volver</p>
+    </div>
+    <div class="encabezado">
+        <h3>Clases del curso</h3>
+        <a mat-raised-button (click)="openModal(course.id)" > <mat-icon>add</mat-icon> Agregar nueva clase</a>
+    </div>
+    <div class="lista-clases">
+        <mat-list class="lista">
+            <mat-list-item *ngFor="let class of course.classes; index as i" class="item-lista">
+                <div class="flex-item">
+                    <div class="datos">
+                        <span matListItemTitle class="span-titulo">{{class}}</span>
+                    </div>
+                    <div class="botones">
+                        <button mat-icon-button class="btn-borrar" (click)="deleteClass(i)" ><mat-icon >close</mat-icon></button>
+                        <button mat-icon-button class="btn-editar" (click)="openModal(course.id, course.classes[i])"><mat-icon  >edit</mat-icon></button>
+                    </div>
+                </div>
+            </mat-list-item>
+        </mat-list>
+        
+    </div>
+</div>
+<ng-template #elseB>
+    <div class="elseB">
+        <h2 >No se encontró el curso, por favor vuelva al inicio</h2>
+        <button mat-stroked-button routerLink="/dashboard/home">Volver</button>
+    </div>
+</ng-template>

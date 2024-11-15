@@ -1,0 +1,80 @@
+<div class="contenedor">
+    <div class="background">
+        <!-- aca hay una imagen -->
+    </div>
+
+    <!-- Login -->
+    <div class="div-login" *ngIf="!registering">
+        <form [formGroup]="loginForm" class="formulario-login" >
+            <div class="encabezado">
+                <h2>Ingresando <mat-icon fontIcon="favorite"></mat-icon></h2>
+                <p *ngIf="accesDenied" >Los datos no coinciden :(</p>
+            </div>
+
+           <div class="formulario">
+                <mat-form-field class="form-field">
+                    <mat-label>Nombre completo</mat-label>
+                    <input  matInput  formControlName="name">
+                    <mat-error *ngIf="this.loginForm.get('name')?.hasError('required')">El nombre es <strong>obligatorio</strong></mat-error>
+                </mat-form-field>
+                    <mat-form-field class="form-field">
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput  formControlName="email">
+                    <mat-error *ngIf="this.loginForm.get('email')?.hasError('email') ">Ingrese un email válido</mat-error>
+                    <mat-error *ngIf="this.loginForm.get('email')?.hasError('required') ">El mail es <strong>obligatorio</strong></mat-error>  
+                </mat-form-field>
+           </div>
+      
+           <div class="botones">
+                <a mat-flat-button [disabled]="!loginForm.valid"(click)="sendForm()" [ngClass]="{'boton': this.loginForm.valid, 'desactivado': !this.loginForm.valid}">
+                    Ingresar
+                </a>
+                <button mat-button (click)="changeForm()" class="boton">Crear una cuenta</button>
+                <button mat-button type="button" class="boton" (click)="openDialog()">Ver usuarios</button>
+
+           </div>
+          </form>
+    </div>
+    <!-- Registro -->
+    <div class="div-registro" *ngIf="registering">
+        
+        <form [formGroup]="registerForm" class="formulario-registro">
+            <div class="encabezado">
+                <h2>Creando nuevo Usuario <mat-icon fontIcon="favorite"></mat-icon></h2>
+            </div>
+            <div class="formulario">
+                <mat-form-field class="form-field">
+                    <mat-label>Nombre completo</mat-label>
+                    <input matInput formControlName="name">
+                    <mat-error *ngIf="this.registerForm.get('name')?.hasError('required')">
+                        El nombre es <strong>obligatorio</strong>
+                    </mat-error>
+                    <mat-error *ngIf="this.registerForm.get('name')?.hasError('minlength')">
+                        El nombre <strong>debe tener minimo</strong> 6 caracteres
+                    </mat-error>
+                    
+                </mat-form-field>
+                <mat-form-field class="form-field">
+                    <mat-label>email</mat-label>
+                    <input matInput formControlName="email">
+                    <mat-error *ngIf="this.registerForm.get('email')?.hasError('required')">
+                        El email es <strong>obligatorio</strong>
+                    </mat-error>
+                    <mat-error *ngIf="this.registerForm.get('email')?.hasError('email') ">
+                        Ingrese un email válido
+                    </mat-error>
+                </mat-form-field>
+        
+            </div>
+            <div class="botones">
+                <a mat-flat-button routerLink="/dashboard" [disabled]="!registerForm.valid" (click)="createNewUser()"[ngClass]="{'boton': this.registerForm.valid, 'desactivado': !this.registerForm.valid}"
+                >Crear usuario
+                </a>
+                <button mat-button (click)="changeForm()" class="boton">Volver</button>
+
+            </div>
+    
+        </form>
+    </div>
+
+</div>

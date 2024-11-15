@@ -1,0 +1,14 @@
+@import "../../../shared/colors.scss";
+.dialog{
+    background-color: $background-container;
+    h3{
+        color: $blanco;
+    }
+    h4,p{
+        color: $blanco-oscuro;
+    }
+    button{
+        background-color: $blanco;
+        color: $azul-gris;
+    }
+}

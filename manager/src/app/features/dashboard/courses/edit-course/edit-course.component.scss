@@ -1,0 +1,55 @@
+@import "../../../../shared/colors.scss";
+.modal-div{
+    background-color: $background-container;
+    height: auto;
+    box-shadow: 0 0 10px $color-principal;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+    h3{
+        text-align: center;
+        font-weight: 500;
+        font-size: 20px;
+        margin: 15px;
+        color:$blanco
+    }
+    .formulario{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding-top: 10px;
+       .inputs{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            justify-content: space-between;
+            .div1, .div2{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 7px;
+                .form-field{
+                    width: 350px;
+                    
+                } 
+            }
+            .div2{
+                .form-field{
+                    width: 370px;
+                    .textarea{
+                        height: 90px;
+                    }
+                }
+            }
+       }        
+       .button, button{
+        width: 350px;
+        background-color: $blanco;
+        color: $color-principal;
+        }
+        .disabled{
+            background-color: $blanco-oscuro;
+        }
+    }
+}

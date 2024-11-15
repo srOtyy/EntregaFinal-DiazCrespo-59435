@@ -1,0 +1,61 @@
+@import "../../../../shared/colors.scss";
+.cursos-div{
+    padding: 20px 30px;
+    min-height: 350px;
+    width: 600px;
+
+    .encabezado{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        h2{
+            padding: 10px;
+            color:$blanco;
+            font-weight: 500;
+        }
+        button{
+            font-size: 18px;
+            color:$blanco;
+        }
+        button:hover{
+            background-color: $hover-azul;
+        }
+    }
+    .lista-cursos{
+        border-top: 2px solid $gris-claro;
+        padding: 25px;
+        .lista{
+            max-height: 200px;
+            overflow: hidden;
+            overflow-y: scroll;
+        .container-item{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding-top:10px ;
+            border-bottom: 1px solid $gris-claro;
+            width: auto;
+            .list-item{
+                p{
+                    color: $blanco;
+                    font-weight: 500;
+                }
+            }
+            a{
+                color: $blanco;
+                width: 150px;
+                padding: 0;
+                margin-top: 2px ;
+            }
+            a:hover{
+                background-color: $hover-azul;
+            }
+        }
+        }
+        h3{
+            color: $blanco;
+            font-weight: 500;
+        }
+    }
+}

@@ -1,0 +1,106 @@
+@import "../../../../shared/colors.scss";
+.container-perfil-estudiante{
+    background: $background-container;
+    border-radius: 20px;
+    width: 840px;
+    max-height: 90vh;
+    margin: 0 auto; 
+    padding: 40px;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px $gris-claro;   
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .botones{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .btn-salir,.btn-editar{
+            display: flex;
+        flex-direction: row;
+        align-items: center;
+        button{
+            color: $blanco;
+        }
+        p{
+            color: $gris-claro;
+            &:hover{
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+        }
+    }
+    
+    .encabezado{
+        margin: auto;
+        h3{
+            color: $blanco;
+            font-weight: 500;
+            font-size: 28px;
+        }
+        
+    }
+    .datos-estudiante{
+        h4{
+            margin: auto;
+            padding-bottom: 20px;
+        }
+        display: flex;
+        flex-direction: column;
+        color: $gris-claro;
+        .datos{
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            .flex-cursos{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                padding: 10px;
+                button{
+                    background-color: $hover-azul;
+                    color: $blanco;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    .cursos-estudiante{
+        width: 80%; 
+        margin: auto;
+        max-height: 400px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        
+        .lista{
+            .item{
+                border-bottom: 1px solid $gris-claro;
+                .flex{
+                    padding: 20px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    .nombre{
+                        p{
+                            color: $blanco;
+                        }
+                    }
+                    
+                    .boton{
+                        color: $blanco;
+                        .btn-borrar:hover{
+                            background-color: $rojo;
+                        }
+                    }
+                }
+                
+            }
+        }
+
+    }
+}

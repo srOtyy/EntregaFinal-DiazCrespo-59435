@@ -1,0 +1,31 @@
+<div class="container-perfil">
+    <ng-container *ngIf="student; else elseB">
+     <div class="encabezado">
+         <h2>Perfil</h2>
+     </div>
+     <div class="alumno">
+         <div class="nombre">
+             <h3>{{student.name}}</h3>
+             <p *ngIf="student.admin; else elseP">Admin supremo</p>
+             <ng-template #elseP>
+                <p>Estudiante</p>
+             </ng-template>
+         </div>
+         <div class="perfil-datos">
+             <div class="dato">
+                 <mat-icon class="done">done</mat-icon>
+                 <p>Entregas al dia</p>
+             </div>
+             <div class="dato">
+                 <mat-icon >school</mat-icon>
+                 <p>Proxima clase: Jueves</p>
+             </div>
+         </div>
+     </div>
+    </ng-container>
+    <ng-template #elseB>
+     <h1>Usuario no encontrado</h1>
+    </ng-template>
+ </div>
+  
+ 

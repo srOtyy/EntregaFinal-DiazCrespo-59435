@@ -1,0 +1,21 @@
+<div class="modal-div">
+    <h3 *ngIf="!editing; else elseB">Agregando nueva clase</h3>
+   <ng-template #elseB>
+        <h3>Editando clase</h3>
+   </ng-template>
+    
+    <form class="formulario" [formGroup]="formulario">
+        <mat-form-field class="form-field">
+            <mat-label >Tema de la clase</mat-label>
+            <input  matInput  formControlName="topic">
+            <mat-error *ngIf="this.formulario.get('topic')?.hasError('required')">El tema es <strong>obligatorio</strong></mat-error>
+        </mat-form-field>
+  
+        <button mat-flat-button [disabled]="!this.formulario.valid" (click)="send()" [ngClass]="{'button': this.formulario.valid, 'disabled': !this.formulario.valid}">
+          Guardar
+        </button>
+    
+        <button mat-button  (click)="close()" class="button">Volver</button>
+  </form>
+  
+</div>

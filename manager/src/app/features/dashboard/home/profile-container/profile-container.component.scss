@@ -1,0 +1,62 @@
+@import '../../../../shared/colors.scss';
+.container-perfil{
+    padding: 20px 30px;
+    width: 300px;
+    min-height: 350px;
+    border-left: 1px solid $gris-claro;
+
+    .encabezado{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        h2{
+            color: $blanco;
+            font-weight: 500;
+        }
+        button{
+            color: $gris-claro;
+            margin-top: 15px;
+        }
+        button:hover{
+            background-color: $hover-azul;
+        }
+    }
+   
+    .alumno{
+        width: 80%;
+        margin: auto;
+        .nombre{
+            text-align: center;
+            margin: 10px 20px 30px 20px;
+            h3{
+                color: $blanco;
+                font-size: 18px;
+                font-weight: 500;
+            }
+            p{
+                color:$gris-claro;
+            }
+        }
+        .perfil-datos{
+            border-top: 2px solid $gris-claro;
+            .dato{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 25px;
+                p{  
+                    color: $blanco;
+                    margin-top: 20px;
+                    font-size: 18px;
+                }
+                .done{
+                    color: $verde;       
+                }
+            }   
+           
+        }
+    }
+    
+    
+}

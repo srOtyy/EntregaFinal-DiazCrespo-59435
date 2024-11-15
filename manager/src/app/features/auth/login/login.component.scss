@@ -1,0 +1,65 @@
+@import "../../../shared/colors.scss";
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .background{
+        background-image: url("../../../../../public/elearn3.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 700px;
+        height: 90vh;
+        
+    }
+    .div-login, .div-registro{
+        background-color: $azul-gris;          
+        gap: 20px;
+        width: 270px;
+        padding: 30px 70px;
+        box-shadow: 0px 0px 10px $gris-claro;   
+    
+        .formulario-login,.formulario-registro{    
+            display: flex;
+            flex-direction:column;
+            margin: auto;
+            justify-content: space-between;
+            width: 260px;
+            height: 100%;
+            .encabezado{
+                h2{
+                    text-align: center;
+                    margin-bottom: 15px;
+                    color: $blanco;
+                    font-weight: 500;
+                }
+                p{
+                    color: #bb2124;
+                    text-align: center;
+                    margin: 0;
+                }
+            }
+            .formulario{
+                .form-field{
+                    width: 100%;
+                    padding: 10px;
+                }
+            }
+            .botones{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .boton{
+                    width: 100%;
+                    background-color: $blanco;
+                    color: $color-principal;
+                   
+                }
+                .desactivado{
+                    width: 100%;
+                    background-color: $blanco-oscuro;
+                }
+            }
+        }       
+    }    
+}

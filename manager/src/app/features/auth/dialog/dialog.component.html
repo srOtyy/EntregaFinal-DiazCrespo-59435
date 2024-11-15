@@ -1,0 +1,15 @@
+<mat-dialog-content class="dialog">
+    <h3 mat-dialog-title>Hola profe, te dejo los datos del admin y el usuario</h3>
+  <h4>Admin</h4>
+  <p>Usuario: {{adminName}}</p>
+  <p>email: {{adminEmail}}</p>
+
+  <h4>Usuario</h4>
+  <p>Usuario: {{( user$ | async)?.name }}</p>
+  <p>email: {{( user$ | async)?.email }}</p>
+
+
+</mat-dialog-content>
+<mat-dialog-actions align="end" class="dialog">
+  <button mat-button mat-dialog-close>Salir</button>
+</mat-dialog-actions>

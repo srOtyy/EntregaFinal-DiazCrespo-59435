@@ -1,0 +1,15 @@
+
+  <div class="modal-div">
+    <h3>Cursos disponibles</h3>
+    
+    <mat-selection-list #course class="lista">
+        <mat-list-option *ngFor="let course of courses" class="item" [value]="course.id">
+            <p> {{course.name}} </p>
+        </mat-list-option>
+    </mat-selection-list>
+
+    <div class="botones">
+        <button mat-button (click)="addCourses()"> Agregar</button>
+    <button mat-button  (click)="close()" >Cancelar</button>
+    </div>
+</div>

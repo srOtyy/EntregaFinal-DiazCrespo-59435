@@ -1,0 +1,17 @@
+<div class="cursos-div">
+    <div class="encabezado">
+        <h2>Tus cursos</h2>
+    </div>
+    <div class="lista-cursos">
+        <mat-list class="lista" *ngIf="list.length > 0; else elseB">
+            <div class="container-item"  *ngFor="let course of coursesList">
+                <mat-list-item class="list-item">
+                    <p>{{course.name}}</p>
+                </mat-list-item>
+            </div>
+        </mat-list>
+        <ng-template #elseB class="elseB">
+            <h3>Todavia no estas en ningun curso...</h3>
+        </ng-template>
+    </div>
+</div>
